@@ -1,4 +1,4 @@
-import React, { useState, type CSSProperties } from 'react';
+import { useState, type CSSProperties } from 'react';
 
 // You can pass these as props or import them directly
 const ORBIT_RADIUS = 168; // Adjust this to make the circle wider or tighter

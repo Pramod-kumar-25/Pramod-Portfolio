@@ -1,7 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { RefreshCw } from "lucide-react";
-
 interface HeroTextProps {
   text?: string;
   className?: string;
@@ -11,7 +9,7 @@ export default function HeroText({
   text = "IMMERSE",
   className = "",
 }: HeroTextProps) {
-  const [count, setCount] = useState(0);
+  const [count] = useState(0);
   const words = text.split(" ");
 
   return (
