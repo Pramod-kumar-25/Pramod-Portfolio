@@ -129,7 +129,7 @@ export default function About() {
             AI ENGINEER • AGENTIC SYSTEMS ARCHITECT.
           </p>
 
-          <div className="mt-8 lg:mt-4 xl:mt-8 flex justify-center lg:justify-start w-full scale-[0.65] sm:scale-75 lg:scale-[0.80] xl:scale-[0.95] origin-top lg:origin-top-left relative z-20 -mb-48 sm:-mb-32 lg:mb-0">
+          <div className="mt-8 lg:mt-4 xl:mt-8 flex justify-center lg:justify-start w-full scale-[0.75] sm:scale-[0.85] lg:scale-[0.90] xl:scale-100 origin-top lg:origin-top-left relative z-20 -mb-48 sm:-mb-32 lg:mb-0">
             <SkillOrbit />
           </div>
         </motion.div>
