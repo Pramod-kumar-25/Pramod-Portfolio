@@ -9,11 +9,11 @@ const orbitSkills = [
   { "label": "React", "icon": "https://cdn.simpleicons.org/react/61DAFB" },
   { "label": "Node.js", "icon": "https://cdn.simpleicons.org/nodedotjs/5FA04E" },
   { "label": "PostgreSQL", "icon": "https://cdn.simpleicons.org/postgresql/4169E1" },
-  { "label": "OpenAI", "icon": "/images/openai-icon.svg" },
+  { "label": "OpenAI", "icon": import.meta.env.BASE_URL + "images/openai-icon.svg" },
   { "label": "LangChain", "icon": "https://cdn.simpleicons.org/langchain/1C3C3C" },
   { "label": "Docker", "icon": "https://cdn.simpleicons.org/docker/2496ED" },
   { "label": "Git", "icon": "https://cdn.simpleicons.org/git/F05032" },
-  { "label": "AWS", "icon": "/images/Amazon_Web_Services_Logo.svg" },
+  { "label": "AWS", "icon": import.meta.env.BASE_URL + "images/Amazon_Web_Services_Logo.svg" },
   { "label": "Supabase", "icon": "https://cdn.simpleicons.org/supabase/3ECF8E" },
   { "label": "MongoDB", "icon": "https://cdn.simpleicons.org/mongodb/47A248" }
 ];
