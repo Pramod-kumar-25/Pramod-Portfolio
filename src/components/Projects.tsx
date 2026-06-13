@@ -133,7 +133,7 @@ export default function Projects() {
       spacedTitle: 'D i g i t a l   T w i n',
       category: 'Agentic AI',
       desc: 'A configuration-driven Digital Twin platform modeling expert workflows with multi-agent orchestration, tool-use planning, and stateful AI execution. Features zero-trust safety engines, hybrid RAG pipelines with pgvector, and human-intercept guardrails for high-stakes decision workflows.',
-      image: '/digital_twin.png',
+      image: import.meta.env.BASE_URL + 'digital_twin.png',
       tags: ['Multi-Agent Systems', 'LangGraph', 'FastAPI', 'pgvector', 'RAG', 'Safety Guardrails']
     },
     {
@@ -141,7 +141,7 @@ export default function Projects() {
       spacedTitle: 'A c a d e m y',
       category: 'AI Native Learning',
       desc: 'A production-grade AI-native learning platform with conversational AI tutor, memory-aware summarization, mastery-based progression, and real-time response personalization. Built with FastAPI, OpenAI embeddings, pgvector, and deployed on AWS with multiple live cohorts.',
-      image: '/ai_learning_platform.png',
+      image: import.meta.env.BASE_URL + 'ai_learning_platform.png',
       tags: ['RAG Pipeline', 'OpenAI', 'FastAPI', 'React', 'PostgreSQL', 'AWS']
     },
     {
@@ -149,7 +149,7 @@ export default function Projects() {
       spacedTitle: 'R A G   P i p e l i n e',
       category: 'AI Infrastructure',
       desc: 'Designed and implemented a hybrid Retrieval-Augmented Generation pipeline combining vector search, lexical retrieval, confidence gating, and hierarchical knowledge hydration over pgvector/Supabase. Built structured knowledge ingestion that transforms documentation into retrieval chunks with audit trails.',
-      image: '/rag_pipeline.png',
+      image: import.meta.env.BASE_URL + 'rag_pipeline.png',
       tags: ['pgvector', 'Supabase', 'LangChain', 'OpenAI Embeddings', 'Hybrid Search', 'Python']
     },
     {
@@ -157,7 +157,7 @@ export default function Projects() {
       spacedTitle: 'E R P   A n a l y t i c s',
       category: 'Enterprise IT',
       desc: 'Supported enterprise operations at Dredging Corporation of India by maintaining MS Dynamics 365 modules for payroll and HR processes. Created interactive Power BI dashboards visualizing operational data and provided IT support for 100+ employees across hardware, software, and network layers.',
-      image: '/erp_dashboard.png',
+      image: import.meta.env.BASE_URL + 'erp_dashboard.png',
       tags: ['MS Dynamics 365', 'Power BI', 'Enterprise IT', 'Data Analytics', 'ERP Systems']
     }
   ];

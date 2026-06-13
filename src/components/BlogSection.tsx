@@ -9,7 +9,7 @@ const blogs = [
     slug: "production-rag-education",
     title: "Building Production RAG for Education",
     description: "How I architected a production-grade RAG pipeline for an AI learning platform...",
-    image: "/images/blog-ai-dev.svg",
+    image: import.meta.env.BASE_URL + "images/blog-ai-dev.svg",
     tag: "AI Engineering",
     readTime: "5 min read"
   },
@@ -17,7 +17,7 @@ const blogs = [
     slug: "ai-native-learning-architecture",
     title: "The Architecture of AI-Native Learning",
     description: "Why I chose FastAPI over Express for AI workloads, how mastery-based progression works...",
-    image: "/images/blog-system-design.svg",
+    image: import.meta.env.BASE_URL + "images/blog-system-design.svg",
     tag: "System Design",
     readTime: "4 min read"
   },
@@ -25,7 +25,7 @@ const blogs = [
     slug: "agentic-digital-twin-architecture",
     title: "Architecting Agentic Digital Twins",
     description: "Designing stateful, autonomous digital twin agents capable of tool-use planning and human-in-the-loop orchestration...",
-    image: "/images/blog-n8n-ai.svg",
+    image: import.meta.env.BASE_URL + "images/blog-n8n-ai.svg",
     tag: "Agentic Systems",
     readTime: "6 min read"
   }
