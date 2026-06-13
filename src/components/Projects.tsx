@@ -182,7 +182,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="relative w-full bg-[#0A0A0A] text-white py-24 sm:py-32 overflow-hidden border-t border-white/5"
+      className="relative w-full bg-[#0A0A0A] text-white py-24 sm:py-32 overflow-hidden border-t border-white/5 scroll-mt-32"
     >
       {/* Background ambient lighting */}
       <div className="absolute right-0 bottom-10 w-[350px] h-[350px] rounded-full bg-[#d4f534]/3 blur-[140px] pointer-events-none"></div>

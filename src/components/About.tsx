@@ -95,7 +95,7 @@ export default function About() {
     <section
       id="about"
       ref={sectionRef}
-      className="relative w-full bg-[#0A0A0A] text-white py-24 sm:py-32 lg:py-40 overflow-hidden border-t border-white/5 scroll-mt-24"
+      className="relative w-full bg-[#0A0A0A] text-white py-24 sm:py-32 lg:py-40 overflow-hidden border-t border-white/5 scroll-mt-32"
     >
       {/* Background radial glow */}
       <motion.div

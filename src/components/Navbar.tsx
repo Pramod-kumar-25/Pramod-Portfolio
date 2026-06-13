@@ -48,8 +48,8 @@ export default function Navbar() {
 
   const menuItems = [
     { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Projects', href: '#projects' }
+    { name: 'About Me', href: '#about' },
+    { name: 'My Projects', href: '#projects' }
   ];
 
   const handleScrollTo = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -57,7 +57,42 @@ export default function Navbar() {
     setMobileMenuOpen(false);
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      const isMobile = window.innerWidth < 640;
+      const isTablet = window.innerWidth >= 640 && window.innerWidth < 1024;
+
+      // Calculate how far the section's top border should be from the top of the screen
+      // This compensates for the section's top padding (py-24, py-32, py-40) 
+      // and the navbar's height so the text always lands perfectly right below the navbar.
+      let elementYTarget = 0;
+
+      if (href === '#contact') {
+        // --- CUSTOM CONTACT SECTION OFFSETS ---
+        // Increase these numbers to make the page scroll LESS (keeping the section lower on screen)
+        if (isMobile) {
+          elementYTarget = 60;
+        } else if (isTablet) {
+          elementYTarget = 120;
+        } else {
+          elementYTarget = 15; // <-- Change this number to tweak Desktop contact scroll
+        }
+      } else {
+        // --- OFFSETS FOR ABOUT & PROJECTS ---
+        if (isMobile) {
+          elementYTarget = 4;
+        } else if (isTablet) {
+          elementYTarget = -18;
+        } else {
+          elementYTarget = -50;
+        }
+      }
+
+      const absoluteElementTop = element.getBoundingClientRect().top + window.scrollY;
+      const scrollPosition = absoluteElementTop - elementYTarget;
+
+      window.scrollTo({
+        top: scrollPosition,
+        behavior: 'smooth'
+      });
     }
   };
 
@@ -163,7 +198,7 @@ export default function Navbar() {
               onClick={(e) => handleScrollTo(e, '#contact')}
               className="px-6 py-3 rounded-full border border-white/20 hover:border-[#d4f534] hover:text-[#d4f534] transition-colors font-mono text-sm tracking-widest flex items-center gap-2"
             >
-              <span>CONTACT</span>
+              <span>CONTACT ME</span>
               <span>↗</span>
             </a>
           </motion.div>
