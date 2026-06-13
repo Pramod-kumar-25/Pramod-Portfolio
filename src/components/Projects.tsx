@@ -65,7 +65,7 @@ function ProjectCard({ project, projectVariants }: { project: ProjectItem; proje
           <motion.img
             src={project.image}
             alt={project.title}
-            className="w-[108%] h-[108%] -left-[4%] -top-[4%] relative object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 ease-out"
+            className="w-[108%] h-[108%] -left-[4%] -top-[4%] relative object-cover transition-all duration-700 ease-out"
             style={{
               x: shouldReduce ? 0 : imgTranslateX,
               y: shouldReduce ? 0 : imgTranslateY,

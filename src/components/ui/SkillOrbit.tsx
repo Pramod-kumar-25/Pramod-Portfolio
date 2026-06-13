@@ -23,7 +23,7 @@ export function SkillOrbit() {
   const [hoveredSkill, setHoveredSkill] = useState<string | null>(null);
 
   return (
-    <div className="relative flex items-center justify-center bg-transparent min-h-[500px] w-full overflow-hidden">
+    <div className="relative flex items-center justify-center bg-transparent min-h-[500px] w-full overflow-visible">
       {/* Optional ambient background glow */}
       <div className="absolute h-64 w-64 rounded-full bg-[#d4f534]/10 blur-[80px] md:h-80 md:w-80" aria-hidden="true" />
 
