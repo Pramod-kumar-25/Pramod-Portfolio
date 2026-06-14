@@ -168,7 +168,7 @@ export default function Footer() {
             </span>
             <div className="flex flex-col gap-2.5 font-sans text-sm text-neutral-400">
               <a
-                href="https://www.linkedin.com/in/Pramod-kumar"
+                href="https://www.linkedin.com/in/pramodkumarthummala"
                 target="_blank"
                 rel="noopener noreferrer"
                 onMouseEnter={() => setActiveItem('LINKEDIN')}
