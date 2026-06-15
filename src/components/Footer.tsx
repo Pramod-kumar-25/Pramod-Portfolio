@@ -92,9 +92,15 @@ export default function Footer() {
               whileHover={{ scale: 1.02, boxShadow: "0px 0px 30px rgba(212, 245, 52, 0.35)" }}
               whileTap={{ scale: 0.98 }}
               transition={{ type: "spring", stiffness: 450, damping: 25 }}
-              className="w-full py-4 rounded-full bg-[#d4f534] text-black text-center font-sans font-bold text-base hover:bg-white transition-colors duration-300 shadow-lg block"
+              className="w-full py-4 rounded-full bg-[#d4f534] text-black flex items-center justify-center gap-2 font-sans font-bold text-base hover:bg-white transition-colors duration-300 shadow-lg"
             >
-              thummalapramodkumar@gmail.com
+              Email Me
+              <motion.span
+                animate={{ x: [0, 5, 0] }}
+                transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+              >
+                <ArrowRight className="w-5 h-5" />
+              </motion.span>
             </motion.a>
             <motion.a
               href="https://www.linkedin.com/in/pramodkumarthummala"
