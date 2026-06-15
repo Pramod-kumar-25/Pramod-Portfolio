@@ -86,7 +86,7 @@ export default function Footer() {
             transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
           >
             <motion.a
-              href="mailto:pramodlucky2525@gmail.com"
+              href="mailto:thummalapramodkumar@gmail.com"
               onMouseEnter={() => setActiveItem('EMAIL')}
               onMouseLeave={() => setActiveItem('PRAMOD KUMAR')}
               whileHover={{ scale: 1.02, boxShadow: "0px 0px 30px rgba(212, 245, 52, 0.35)" }}
@@ -94,7 +94,7 @@ export default function Footer() {
               transition={{ type: "spring", stiffness: 450, damping: 25 }}
               className="w-full py-4 rounded-full bg-[#d4f534] text-black text-center font-sans font-bold text-base hover:bg-white transition-colors duration-300 shadow-lg block"
             >
-              pramodlucky2525@gmail.com
+              thummalapramodkumar@gmail.com
             </motion.a>
             <motion.a
               href="https://www.linkedin.com/in/pramodkumarthummala"

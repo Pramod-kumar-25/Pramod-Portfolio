@@ -5,14 +5,25 @@ export default function Experience() {
   const containerRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(containerRef, { once: true, margin: '-80px' });
 
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
+  // Work Experience Scroll Tracking
+  const workRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress: workProgress } = useScroll({
+    target: workRef,
     offset: ["start center", "end center"]
   });
+  const workScaleY = useSpring(workProgress, { stiffness: 90, damping: 25, restDelta: 0.001 });
+  const workCometTop = useTransform(workScaleY, [0, 1], ["0%", "100%"]);
+  const workCometOpacity = useTransform(workScaleY, [0, 0.08], [0, 1]);
 
-  const scaleY = useSpring(scrollYProgress, { stiffness: 90, damping: 25, restDelta: 0.001 });
-  const cometTop = useTransform(scaleY, [0, 1], ["0%", "100%"]);
-  const cometOpacity = useTransform(scaleY, [0, 0.08], [0, 1]);
+  // Education Scroll Tracking
+  const eduRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress: eduProgress } = useScroll({
+    target: eduRef,
+    offset: ["start center", "end center"]
+  });
+  const eduScaleY = useSpring(eduProgress, { stiffness: 90, damping: 25, restDelta: 0.001 });
+  const eduCometTop = useTransform(eduScaleY, [0, 1], ["0%", "100%"]);
+  const eduCometOpacity = useTransform(eduScaleY, [0, 0.08], [0, 1]);
 
   const experienceList = [
     {
@@ -94,7 +105,7 @@ export default function Experience() {
         >
           
           {/* Left Column: Work Experience */}
-          <div className="flex flex-col gap-8">
+          <div ref={workRef} className="flex flex-col gap-8">
             <h3 className="font-sans font-bold text-xl uppercase tracking-wider text-white border-b border-white/10 pb-3 mb-4 flex items-center gap-2">
               <span className="text-[#d4f534]">/</span> Work Experience
             </h3>
@@ -105,13 +116,13 @@ export default function Experience() {
               {/* Active scroll-drawn line */}
               <motion.div
                 className="absolute left-0 top-2 bottom-2 w-[1px] bg-gradient-to-b from-[#d4f534] to-[#d4f534]/20 origin-top"
-                style={{ scaleY }}
+                style={{ scaleY: workScaleY }}
               />
               {/* Scroll-following glowing comet */}
               <div className="absolute left-0 top-2 bottom-2 w-0 pointer-events-none">
                 <motion.div
                   className="absolute left-0 -translate-x-1/2 w-1 h-8 rounded-full bg-gradient-to-t from-[#d4f534] via-[#d4f534]/50 to-transparent shadow-[0_0_10px_rgba(212,245,52,0.8)]"
-                  style={{ top: cometTop, y: "-100%", opacity: cometOpacity }}
+                  style={{ top: workCometTop, y: "-100%", opacity: workCometOpacity }}
                 />
               </div>
               {experienceList.map((job, idx) => (
@@ -158,7 +169,7 @@ export default function Experience() {
           </div>
 
           {/* Right Column: Education */}
-          <div className="flex flex-col gap-8">
+          <div ref={eduRef} className="flex flex-col gap-8">
             <h3 className="font-sans font-bold text-xl uppercase tracking-wider text-white border-b border-white/10 pb-3 mb-4 flex items-center gap-2">
               <span className="text-[#d4f534]">/</span> Education
             </h3>
@@ -169,13 +180,13 @@ export default function Experience() {
               {/* Active scroll-drawn line */}
               <motion.div
                 className="absolute left-0 top-2 bottom-2 w-[1px] bg-gradient-to-b from-[#d4f534] to-[#d4f534]/20 origin-top"
-                style={{ scaleY }}
+                style={{ scaleY: eduScaleY }}
               />
               {/* Scroll-following glowing comet */}
               <div className="absolute left-0 top-2 bottom-2 w-0 pointer-events-none">
                 <motion.div
                   className="absolute left-0 -translate-x-1/2 w-1 h-8 rounded-full bg-gradient-to-t from-[#d4f534] via-[#d4f534]/50 to-transparent shadow-[0_0_10px_rgba(212,245,52,0.8)]"
-                  style={{ top: cometTop, y: "-100%", opacity: cometOpacity }}
+                  style={{ top: eduCometTop, y: "-100%", opacity: eduCometOpacity }}
                 />
               </div>
               {educationList.map((edu, idx) => (
