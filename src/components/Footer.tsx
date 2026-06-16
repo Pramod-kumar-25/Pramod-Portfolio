@@ -86,7 +86,7 @@ export default function Footer() {
             transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
           >
             <motion.a
-              href="mailto:thummalapramodkumar@gmail.com"
+              href="mailto:pramodkumarthummala@gmail.com"
               onMouseEnter={() => setActiveItem('EMAIL')}
               onMouseLeave={() => setActiveItem('PRAMOD KUMAR')}
               whileHover={{ scale: 1.02, boxShadow: "0px 0px 30px rgba(212, 245, 52, 0.35)" }}
